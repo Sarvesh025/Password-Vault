@@ -66,7 +66,7 @@ export default function RegisterPage() {
     try {
       setGoogleLoading(true)
       setError("")
-      window.location.href = "http://localhost:3001/auth/google"
+      window.location.href = `${process.env.NEXT_PUBLIC_GOOGLE_AUTH_URL}`
     } catch (err) {
       setError("Failed to sign up with Google")
       console.error(err)
